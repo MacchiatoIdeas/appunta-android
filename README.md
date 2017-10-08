@@ -1,0 +1,2 @@
+# APPUNTA Android companion app
+
