@@ -1,23 +1,41 @@
 import React from 'react';
 import { StackNavigator } from 'react-navigation'
-import { Constants } from 'expo'
+import { createStore, applyMiddleware } from 'redux'
+import thunk from 'redux-thunk'
+import { Provider } from 'react-redux'
+import rootReducer from './reducers'
 import * as screens from './screens'
+import { APPUNTA_COLOR } from './constants'
+import { Dimensions } from 'react-native'
+import { makeHeaderStyle } from './api'
+
+const store = createStore(rootReducer, {
+  auth: undefined,
+  home: undefined
+
+}, applyMiddleware(thunk))
 
 const Appunta = StackNavigator({
   Login: { screen: screens.LoginScreen },
   Home: { screen: screens.HomeScreen },
-  Chat: { screen: screens.ChatScreen }
+  Subject: { screen: screens.SubjectScreen }
 }, {
   navigationOptions: {
-    headerStyle: {
-      marginTop: Constants.statusBarHeight
+    headerStyle: makeHeaderStyle(APPUNTA_COLOR),
+    headerTintColor: 'white',
+    headerTitleStyle: {
+      width: Dimensions.get('window').width
     }
   },
-  initialRouteName: 'Login'
+  initialRouteName: 'Home'
 })
 
 export default class App extends React.Component {
   render() {
-    return <Appunta/>
+    return (
+      <Provider store={store}>
+        <Appunta/>
+      </Provider>
+    )
   }
 }
