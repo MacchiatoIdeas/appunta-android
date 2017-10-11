@@ -1,0 +1,12 @@
+export const HOME_FETCH   = 'HOME_FETCH'
+export const HOME_FAILURE = 'HOME_FAILURE'
+export const HOME_RECV    = 'HOME_RECV'
+
+export const SUBJECT_FETCH = 'SUBJECT_FETCH'
+export const SUBJECT_FAILURE = 'SUBJECT_FAILURE'
+export const SUBJECT_RECV = 'SUBJECT_RECV'
+
+export const AUTH_TOKEN_FETCH = 'LOGIN_TOKEN_FETCH'
+export const AUTH_SUCCESS = 'LOGIN_SUCCESS'
+export const AUTH_FAILURE = 'LOGIN_FAILURE'
+export const AUTH_IDLE = 'LOGIN_IDLE'
