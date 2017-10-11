@@ -1,21 +1,56 @@
 import React from 'react'
-import { View, Text, Button } from 'react-native'
+import { ScrollView, ActivityIndicator} from 'react-native'
+import { connect } from 'react-redux'
+import { fetchSubjects } from '../actions/home'
+import SubjectItem from '../components/SubjectItem'
 
+@connect(
+  state => ({
+    test: state.test,
+    fetching: state.home.fetching,
+    subjects: state.home.subjects,
+
+  }), {
+    fetchSubjects
+  }
+)
 export default class HomeScreen extends React.Component {
   static navigationOptions = {
-    title: 'Welcome'
+    title: 'Materias'
+  }
+
+  componentWillMount() {
+    const { fetchSubjects } = this.props
+    fetchSubjects()
   }
 
   render() {
-    const { navigate } = this.props.navigation
+    const {
+      fetching,
+      subjects,
+
+    } = this.props
+
+    if (fetching) {
+      return <ActivityIndicator
+        style={{
+          marginTop: 50
+        }}
+        size="large"/>
+    }
 
     return (
-      <View>
-        <Text>Hello, Chat app!</Text>
-        <Button
-          onPress={() => navigate('Chat')}
-          title="Chat with Lucy"/>
-      </View>
+      <ScrollView>
+        {
+          subjects.map(
+            (subject, i) =>
+              <SubjectItem
+                navigation={this.props.navigation}
+                subject={subject}
+                key={i}/>
+          )
+        }
+      </ScrollView>
     )
   }
 }
