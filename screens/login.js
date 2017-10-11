@@ -1,10 +1,31 @@
 import React from 'react'
-import {View, Image, KeyboardAvoidingView, StyleSheet, Text, ActivityIndicator, ToastAndroid} from 'react-native'
+import {
+  View, Image, KeyboardAvoidingView,
+  StyleSheet, Text, ActivityIndicator,
+  ToastAndroid
+
+} from 'react-native'
+import { connect } from 'react-redux'
 
 import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome'
 import { Fumi } from 'react-native-textinput-effects'
 import Button from 'apsl-react-native-button'
+import { getToken, resetState } from "../actions/auth"
+import { APPUNTA_COLOR } from '../constants'
 
+@connect(
+  state => ({
+    auth: state.auth,
+    authenticated: state.auth.authenticated,
+    authenticationFailed: state.auth.authenticationFailed,
+    error: state.auth.error,
+    fetchingToken: state.auth.fetchingToken
+
+  }), {
+    getToken,
+    resetState
+  }
+)
 export default class LoginScreen extends React.Component {
   static navigationOptions = {
     header: null
@@ -26,7 +47,7 @@ export default class LoginScreen extends React.Component {
     this.refs.usernameInput.focus()
   }
 
-  getToken() {
+  handleLogin() {
     const {
       username,
       password
@@ -37,56 +58,63 @@ export default class LoginScreen extends React.Component {
       this.refs.usernameInput.focus()
       ToastAndroid.show('Usuario requerido', ToastAndroid.SHORT)
       return
-    } else if (password === '') {
+    }
+
+    if (password === '') {
       this.refs.passwordInput.focus()
       ToastAndroid.show('Contraseña requerida', ToastAndroid.SHORT)
       return
     }
 
-    this.setState(() => {
-      return { signingIn: true }
-    })
+    const { getToken } = this.props
+    getToken(username, password)
+  }
 
-    fetch('http://api.macchiato.cl/o/token/', {
-      method: 'POST',
-      body: `grant_type=password&username=${username}&password=${password}`,
-      headers: {
-        'Content-Type': 'application/x-www-form-urlencoded',
-        'Authorization': 'Basic TjYxbVZSSnU1UXM0NGJ4VmZ5Tlp1TkZ4TUNXMDI4MDVDVVFzamQ3QjplRzFqSGJIcm56RUxpSjN3R0t0anBFWDcxZkxSTFhTVGxmRXV6OFFXSWxrYW1FY21iTkJnTjNrQ1AxOFlGYzd2OUVnR0s5M3dPMTRiUUVYRDVaZkdTMjVkVlZrMUVvcDV1SGoyblNTQWUza1V4ODRBNjd6N01xOXNTcmdrZGhPMw=='
-      }
-    })
-      .then(
-        response => response.json(),
-        error => console.log(error)
-      )
-      .then(data => {
-        this.setState(() => {
-          return { signingIn: false }
-        })
+  componentDidUpdate() {
+    /*
+    First attempt was to use shouldComponentUpdate(), but it didn't
+    seem to get called after a change of state in redux (may be it
+    uses forceUpdate() under the hood). This method gets called always
+    after update/render, and it proves to be useful for our purposes.
+     */
 
-        if (data.hasOwnProperty('error')) {
-          ToastAndroid.show("Credenciales inválidas", ToastAndroid.SHORT)
-          this.resetFields()
-        }
+    const { authenticationFailed, authenticated, resetState } = this.props
+    const { navigate } = this.props.navigation
 
-        console.log(data)
-      })
+    if (authenticationFailed) {
+      this.resetFields()
+      resetState()
+    } else if (authenticated) {
+      navigate('Home')
+    }
   }
 
   render() {
+    const {
+      authenticationFailed,
+      fetchingToken,
+
+    } = this.props
+
     let buttonContent
-    if (!this.state.signingIn) {
-      buttonContent = <Text style={{
-        color: 'white',
-        fontWeight: 'bold',
-        alignSelf: 'stretch',
-        textAlign: 'center',
-        fontSize: 18
-      }}>
-        Ingresar
-      </Text>
+    if (!fetchingToken) {
+      buttonContent =
+        <Text style={{
+          color: 'white',
+          fontWeight: 'bold',
+          alignSelf: 'stretch',
+          textAlign: 'center',
+          fontSize: 18
+        }}>
+          Ingresar
+        </Text>
+
     } else {
       buttonContent = <ActivityIndicator color="white" size="large"/>
+    }
+
+    if (authenticationFailed) {
+      ToastAndroid.show("Credenciales inválidas", ToastAndroid.SHORT)
     }
 
     return (
@@ -126,7 +154,9 @@ export default class LoginScreen extends React.Component {
               keyboardType="email-address"
               returnKeyType="next"
               autoFocus={true}
-              onChangeText={username => this.setState(() => { return { username } })}
+              onChangeText={username => this.setState(() => {
+                return { username }
+              })}
               onSubmitEditing={() => this.refs.passwordInput.focus() }
             />
             <Fumi
@@ -142,8 +172,10 @@ export default class LoginScreen extends React.Component {
                 marginTop: -1,
               }}
               secureTextEntry={true}
-              onChangeText={(password) => this.setState(() => { return { password }})}
-              onSubmitEditing={this.getToken.bind(this)}
+              onChangeText={(password) => this.setState(() => {
+                return { password }
+              })}
+              onSubmitEditing={this.handleLogin.bind(this)}
             />
 
             <Button
@@ -157,7 +189,7 @@ export default class LoginScreen extends React.Component {
                 borderWidth: 0,
                 height: 60
               }}
-              onPress={this.getToken.bind(this)}>
+              onPress={this.handleLogin.bind(this)}>
               <View style={{flex: 1}}>
                 {buttonContent}
               </View>
@@ -173,7 +205,7 @@ export default class LoginScreen extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#4CA2E8',
+    backgroundColor: APPUNTA_COLOR,
     justifyContent: 'center',
     flex: 1
   },
