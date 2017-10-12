@@ -1,34 +1,33 @@
 import {
-  SUBJECT_FETCH,
-  SUBJECT_FAILURE,
-  SUBJECT_RECV
+  EXERCISE_FAILURE,
+  EXERCISE_RECV,
+  EXERCISE_FETCH
 
 } from '../actions/index'
 
+import { FETCH_STATE_TEMPLATE } from '../api'
+
 const initialState = {
-  data: {},
-  fetching: false,
-  fetched: false,
-  error: ''
+  ...FETCH_STATE_TEMPLATE
 }
 
 export default (state=initialState, action) => {
   switch (action.type) {
-    case SUBJECT_FETCH:
+    case EXERCISE_FETCH:
       return {
         ...initialState,
         fetching: true
       }
-    case SUBJECT_RECV:
+    case EXERCISE_FAILURE:
+      return {
+        ...initialState,
+        error: action.error
+      }
+    case EXERCISE_RECV:
       return {
         ...initialState,
         data: action.data,
         fetched: true
-      }
-    case SUBJECT_FAILURE:
-      return {
-        ...initialState,
-        error: action.error
       }
     default:
       return state

@@ -11,14 +11,18 @@ import { makeHeaderStyle } from './api'
 
 const store = createStore(rootReducer, {
   auth: undefined,
-  home: undefined
+  home: undefined,
+  subject: undefined,
+  unit: undefined,
 
 }, applyMiddleware(thunk))
 
 const Appunta = StackNavigator({
   Login: { screen: screens.LoginScreen },
   Home: { screen: screens.HomeScreen },
-  Subject: { screen: screens.SubjectScreen }
+  Subject: { screen: screens.SubjectScreen },
+  Unit: { screen: screens.UnitScreen },
+  Exercise: { screen: screens.ExerciseScreen }
 }, {
   navigationOptions: {
     headerStyle: makeHeaderStyle(APPUNTA_COLOR),

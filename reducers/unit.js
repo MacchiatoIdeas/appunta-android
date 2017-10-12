@@ -1,7 +1,7 @@
 import {
-  SUBJECT_FETCH,
-  SUBJECT_FAILURE,
-  SUBJECT_RECV
+  UNIT_RECV,
+  UNIT_FETCH,
+  UNIT_FAILURE
 
 } from '../actions/index'
 
@@ -14,18 +14,18 @@ const initialState = {
 
 export default (state=initialState, action) => {
   switch (action.type) {
-    case SUBJECT_FETCH:
+    case UNIT_FETCH:
       return {
         ...initialState,
-        fetching: true
+        fetching: true,
       }
-    case SUBJECT_RECV:
+    case UNIT_RECV:
       return {
         ...initialState,
         data: action.data,
         fetched: true
       }
-    case SUBJECT_FAILURE:
+    case UNIT_FAILURE:
       return {
         ...initialState,
         error: action.error

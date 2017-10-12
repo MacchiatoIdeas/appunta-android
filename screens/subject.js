@@ -1,21 +1,26 @@
 import React from 'react'
 
 import { connect } from 'react-redux'
-import { View, Text, ActivityIndicator } from 'react-native'
+import {
+  View,
+  ActivityIndicator
+} from 'react-native'
 import { makeHeaderStyle } from '../api'
 import { fetchSubject } from '../actions/subject'
+import { List, ListItem } from 'react-native-elements'
 
 @connect(
   state => ({
     subject: state.subject.data,
-    fetching: state.subject.fetching
+    fetching: state.subject.fetching,
+    fetched: state.subject.fetched
   }), {
     fetchSubject
   }
 )
 export default class SubjectScreen extends React.Component {
   static navigationOptions = ({ navigation }) => ({
-    title: navigation.state.params.subject.name,
+    title: `Unidades: ${navigation.state.params.subject.name}`,
     headerStyle: makeHeaderStyle(navigation.state.params.subject.color)
   })
 
@@ -27,24 +32,33 @@ export default class SubjectScreen extends React.Component {
   render() {
     const {
       subject,
-      fetching
+      fetching,
+      fetched
 
     } = this.props
 
-    if (fetching) {
+    const { navigate } = this.props.navigation
+
+    if (fetching || !fetched) {
       return <ActivityIndicator size="large"/>
     }
 
     return (
       <View>
-        {
-          // Check if subject is loaded
-          (subject.units !== undefined) ?
-            (subject.units.length === 0) ?
-              <Text>No hay materias!</Text> :
-              subject.units.map((unit, i) =>
-              <Text key={i}>{unit.name}</Text>) : null
-        }
+        <List>
+          {
+            subject.units.map((unit, i) => {
+              return (
+                <ListItem key={i}
+                          title={unit.name}
+                          onPress={() => navigate('Unit', {
+                            unit,
+                            color: subject.color
+                          })}/>
+              )
+            })
+          }
+        </List>
       </View>
     )
   }

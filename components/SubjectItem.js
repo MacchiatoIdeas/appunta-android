@@ -23,16 +23,18 @@ export default class SubjectItem extends React.Component {
       <TouchableNativeFeedback
         onPress={() => navigate('Subject', { subject }) }>
 
-        <View>
+        <View style={{ flex: 1 }}>
           {
             // TODO: react-native-fit-image
           }
           <Image
             resizeMode='cover'
             style={styles.thumbnail}
-            source={thumbnail}/>
-
-          <Text>{subject.name}</Text>
+            source={thumbnail}>
+            <View style={styles.thumbnailView}>
+              <Text style={[styles.headline, {backgroundColor: subject.color}]}>{subject.name.toUpperCase()}</Text>
+            </View>
+          </Image>
         </View>
       </TouchableNativeFeedback>
     )
@@ -42,6 +44,20 @@ export default class SubjectItem extends React.Component {
 const styles = StyleSheet.create({
   thumbnail: {
     width: Dimensions.get('window').width,
-    height: 200
+    height: 200,
+    paddingBottom: 0,
+    flex: 1,
+    justifyContent: 'flex-end'
+  },
+  thumbnailView: {
+    width: Dimensions.get('window').width,
+    backgroundColor: 'rgba(0,0,0,0.8)',
+  },
+  headline: {
+    fontSize: 20,
+    textAlign: 'center',
+    backgroundColor: 'rgba(0,0,0,0)',
+    color: 'white',
+    fontWeight: 'bold'
   }
 })

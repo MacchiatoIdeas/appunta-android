@@ -6,7 +6,9 @@ export const makeAuthHeader = (state) => {
 
   if (authData.hasOwnProperty('access_token')) {
     return {
-      'Authorization': `Bearer ${authData.access_token}`
+      header: {
+        'Authorization': `Bearer ${authData.access_token}`
+      }
     }
   }
   return undefined
@@ -17,4 +19,26 @@ export const makeHeaderStyle = backgroundColor => ({
   paddingTop: Constants.statusBarHeight,
   backgroundColor: backgroundColor,
   height: APPBAR_HEIGHT + Constants.statusBarHeight
+})
+
+// Fetch state template
+export const FETCH_STATE_TEMPLATE = {
+  data: {},
+  fetching: false,
+  fetched: false,
+  error: ''
+}
+
+export const makeFetching = (what) => ({
+  type: what
+})
+
+export const makeFetchFailure = (what) => (error) => ({
+  type: what,
+  error
+})
+
+export const makeFetchSuccess = (what) => (data) => ({
+  type: what,
+  data
 })
