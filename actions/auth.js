@@ -1,4 +1,5 @@
 import { AUTH_TOKEN_FETCH, AUTH_SUCCESS, AUTH_FAILURE, AUTH_IDLE } from './index'
+import { APPUNTA_API_URI } from '../constants'
 
 const authenticationFailed = (error) => ({
   type: AUTH_FAILURE,
@@ -17,7 +18,7 @@ const authenticating = {
 export const getToken = (username, password) => (dispatch) => {
   dispatch(authenticating)
 
-  return fetch('http://api.macchiato.cl/o/token/', {
+  return fetch(`${APPUNTA_API_URI}/o/token/`, {
     method: 'POST',
     body: `grant_type=password&username=${username}&password=${password}`,
     headers: {

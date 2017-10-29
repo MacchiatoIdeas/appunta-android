@@ -1,5 +1,10 @@
 import React from 'react'
-import { ScrollView, ActivityIndicator} from 'react-native'
+import {
+  ScrollView,
+  ActivityIndicator,
+  Text,
+  Image,
+} from 'react-native'
 import { connect } from 'react-redux'
 import { fetchSubjects } from '../actions/home'
 import SubjectItem from '../components/SubjectItem'
@@ -16,7 +21,7 @@ import SubjectItem from '../components/SubjectItem'
 )
 export default class HomeScreen extends React.Component {
   static navigationOptions = {
-    title: 'Materias'
+    title: "Material"
   }
 
   componentWillMount() {

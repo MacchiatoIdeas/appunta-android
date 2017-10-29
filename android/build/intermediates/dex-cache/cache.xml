@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="/Users/Rodolfo/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.13.0/a9283170b7305c8d92d25aff02a6ab7e45d06cbe/okio-1.13.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="a9283170b7305c8d92d25aff02a6ab7e45d06cbe">
+        <dex dex="/Users/Rodolfo/dev/macchiato/mobile/android/app/build/intermediates/pre-dexed/debug/okio-1.13.0_65cdbf3466d2d83846f581eafd109d65649bedd7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Rodolfo/dev/macchiato/mobile/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-base/1.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="72128af126ddd7d6252da9357fe560d3abcdfb0c">
+        <dex dex="/Users/Rodolfo/dev/macchiato/mobile/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-base-1.3.0_743f05f4adf77182babd8199a1621e018eb13c58.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Rodolfo/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.6.0/69edde9fc4b01c9fd51d25b83428837478c27254/okhttp-3.6.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="69edde9fc4b01c9fd51d25b83428837478c27254">
+        <dex dex="/Users/Rodolfo/dev/macchiato/mobile/android/app/build/intermediates/pre-dexed/debug/okhttp-3.6.0_956be50fb5db620a2380a18befd2c355f76c5d62.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Rodolfo/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.0.1/support-annotations-23.0.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
+        <dex dex="/Users/Rodolfo/dev/macchiato/mobile/android/app/build/intermediates/pre-dexed/debug/support-annotations-23.0.1_dd905fcc071869425a9bff37891c35729cb1ddaa.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Rodolfo/dev/macchiato/mobile/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fbcore/1.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="37345de2ed2772f385eaeec37a9c2ff0fea99ad7">
+        <dex dex="/Users/Rodolfo/dev/macchiato/mobile/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-fbcore-1.3.0_ad5a8c16381006f2105351912ae6f70431197036.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Rodolfo/dev/macchiato/mobile/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-okhttp3/1.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="c03c08c9934b23c8c09c803345ec51a74119127b">
+        <dex dex="/Users/Rodolfo/dev/macchiato/mobile/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-okhttp3-1.3.0_a30a672301dccddf24393ca932f79d6f58f26d23.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Rodolfo/dev/macchiato/mobile/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline/1.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="48c7f54c2515a2312d3a4481d10c43fbb807f3af">
+        <dex dex="/Users/Rodolfo/dev/macchiato/mobile/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-1.3.0_5027ea11bd396b3bbb8e5b676e3427b4efe35db8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Rodolfo/dev/macchiato/mobile/android/app/build/intermediates/exploded-aar/com.facebook.soloader/soloader/0.1.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="8f615bca00639150c9eb6175d4b5471193f70794">
+        <dex dex="/Users/Rodolfo/dev/macchiato/mobile/android/app/build/intermediates/pre-dexed/debug/com.facebook.soloader-soloader-0.1.0_b71b5fede85dbd6ce4945f383e5180a8d46a6927.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Rodolfo/dev/macchiato/mobile/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fresco/1.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="fe85b87215e405f5917d40ae4960488ac9224b74">
+        <dex dex="/Users/Rodolfo/dev/macchiato/mobile/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-fresco-1.3.0_bdd7e2fbd6d54ab2ba73cb8c01aaf6af3c03fcf1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Rodolfo/dev/macchiato/mobile/android/app/build/intermediates/exploded-aar/com.facebook.fresco/drawee/1.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="c65a2e39d54023bac3aef64a2f0cff89289c7ff6">
+        <dex dex="/Users/Rodolfo/dev/macchiato/mobile/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-drawee-1.3.0_04097e2910c429d575524306a59f2b8eac79b002.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Rodolfo/.gradle/caches/modules-2/files-2.1/javax.inject/javax.inject/1/6975da39a7040257bd51d21a231b76c915872d38/javax.inject-1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="6975da39a7040257bd51d21a231b76c915872d38">
+        <dex dex="/Users/Rodolfo/dev/macchiato/mobile/android/app/build/intermediates/pre-dexed/debug/javax.inject-1_280bc83235235528f2b6f6a69fde8aea7b64189e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Rodolfo/dev/macchiato/mobile/android/app/build/intermediates/exploded-aar/com.facebook.fbui.textlayoutbuilder/textlayoutbuilder/1.0.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="f90b593491e4044903f0bbf68dc3fa2790b151b9">
+        <dex dex="/Users/Rodolfo/dev/macchiato/mobile/android/app/build/intermediates/pre-dexed/debug/com.facebook.fbui.textlayoutbuilder-textlayoutbuilder-1.0.0_66a05401b4f9f958413d6e7d3988cec4bf8ea4e3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Rodolfo/dev/macchiato/mobile/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
+        <dex dex="/Users/Rodolfo/dev/macchiato/mobile/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-23.0.1_25a733ad0a894cade6dff517a9090371c1b05c78.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Rodolfo/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-tasks/1.4.0/d85884acf6810a3bbbecb587f239005cbc846dc4/bolts-tasks-1.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
+        <dex dex="/Users/Rodolfo/dev/macchiato/mobile/android/app/build/intermediates/pre-dexed/debug/bolts-tasks-1.4.0_21ad02056df43ad44a13159e5dc6d358b041bad5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Rodolfo/dev/macchiato/mobile/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.48.4/jars/libs/infer-annotations-4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="9809e90be788acdb479b2b44e2112f3295a03068">
+        <dex dex="/Users/Rodolfo/dev/macchiato/mobile/android/app/build/intermediates/pre-dexed/debug/infer-annotations-4.0_82de7650f3ad729867396b0699a32e99158dca34.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Rodolfo/dev/macchiato/mobile/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.48.4/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="56d3e81fee5f47a7a12ab65f4620f580c9c71d1e">
+        <dex dex="/Users/Rodolfo/dev/macchiato/mobile/android/app/build/intermediates/pre-dexed/debug/com.facebook.react-react-native-0.48.4_e90519f7e23ee238909cb0523b292d46f9d5e4c9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Rodolfo/dev/macchiato/mobile/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/libs/internal_impl-23.0.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
+        <dex dex="/Users/Rodolfo/dev/macchiato/mobile/android/app/build/intermediates/pre-dexed/debug/internal_impl-23.0.1_c6fe52c3a9a3414f0290f84b66909d0124d0506e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Rodolfo/dev/macchiato/mobile/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
+        <dex dex="/Users/Rodolfo/dev/macchiato/mobile/android/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.0.1_7dfb165dbc447da923baba1f2b6e365d4e595f06.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Rodolfo/.gradle/caches/modules-2/files-2.1/com.facebook.fbui.textlayoutbuilder/staticlayout-proxy/1.0/f162442a19fff13995fbd51ba414d9ee05579080/staticlayout-proxy-1.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="f162442a19fff13995fbd51ba414d9ee05579080">
+        <dex dex="/Users/Rodolfo/dev/macchiato/mobile/android/app/build/intermediates/pre-dexed/debug/staticlayout-proxy-1.0_157377815c6a8e60a51d52961b4bc0a48c8d92b4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Rodolfo/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp-urlconnection/3.6.0/3f9b16b774f2c36cfd86dd2053d0b3059531dacc/okhttp-urlconnection-3.6.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="3f9b16b774f2c36cfd86dd2053d0b3059531dacc">
+        <dex dex="/Users/Rodolfo/dev/macchiato/mobile/android/app/build/intermediates/pre-dexed/debug/okhttp-urlconnection-3.6.0_ba82a59af86745e6bf0948d430764720121a9041.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Rodolfo/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/3.0.0/5871fb60dc68d67da54a663c3fd636a10a532948/jsr305-3.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="5871fb60dc68d67da54a663c3fd636a10a532948">
+        <dex dex="/Users/Rodolfo/dev/macchiato/mobile/android/app/build/intermediates/pre-dexed/debug/jsr305-3.0.0_963cb5eda97c5f04c1353277389f964520e5663f.jar" />
+    </item>
+
+</items>

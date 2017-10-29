@@ -1,4 +1,3 @@
-import { Constants } from 'expo'
 import { APPBAR_HEIGHT } from './constants'
 
 export const makeAuthHeader = (state) => {
@@ -14,11 +13,9 @@ export const makeAuthHeader = (state) => {
   return undefined
 }
 
+
 export const makeHeaderStyle = backgroundColor => ({
-  // TODO: Nasty trick to overcome Expo limitations
-  paddingTop: Constants.statusBarHeight,
-  backgroundColor: backgroundColor,
-  height: APPBAR_HEIGHT + Constants.statusBarHeight
+  backgroundColor: backgroundColor
 })
 
 // Fetch state template

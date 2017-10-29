@@ -12,6 +12,8 @@ import {
 
 } from '../api'
 
+import { APPUNTA_API_URI } from '../constants'
+
 const fetching = makeFetching(EXERCISE_FETCH)
 const fetchSuccess = makeFetchSuccess(EXERCISE_RECV)
 const fetchFailure = makeFetchFailure(EXERCISE_FAILURE)
@@ -19,7 +21,7 @@ const fetchFailure = makeFetchFailure(EXERCISE_FAILURE)
 export const fetchExercise = (id) => (dispatch, getState) => {
   dispatch(fetching)
 
-  return fetch(`http://api.macchiato.cl/exercises/exercises/${id}`,
+  return fetch(`${APPUNTA_API_URI}/exercises/exercises/${id}`,
     makeAuthHeader(getState()))
 
     .then(

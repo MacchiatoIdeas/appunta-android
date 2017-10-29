@@ -6,6 +6,7 @@ import {
 } from './index'
 
 import { makeAuthHeader } from '../api'
+import { APPUNTA_API_URI } from '../constants'
 
 const fetching = {
   type: UNIT_FETCH
@@ -24,7 +25,7 @@ const fetchingSuccess = (data) => ({
 export const fetchUnit = (id) => (dispatch, getState) => {
   dispatch(fetching)
 
-  return fetch(`http://api.macchiato.cl/material/units/${id}`,
+  return fetch(`${APPUNTA_API_URI}/material/units/${id}`,
     makeAuthHeader(getState()))
 
     .then(

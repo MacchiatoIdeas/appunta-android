@@ -1,5 +1,6 @@
 import {HOME_FAILURE, HOME_FETCH, HOME_RECV} from "./index";
 import { makeAuthHeader } from '../api'
+import { APPUNTA_API_URI } from '../constants'
 
 const fetching = {
   type: HOME_FETCH
@@ -18,7 +19,7 @@ const fetchSuccess = (subjects) => ({
 export const fetchSubjects = () => (dispatch, getState) => {
   dispatch(fetching)
 
-  return fetch('http://api.macchiato.cl/material/subjects/', makeAuthHeader(getState()))
+  return fetch(`${APPUNTA_API_URI}/material/subjects/`, makeAuthHeader(getState()))
     .then(
       response => response.json(),
       error => dispatch(fetchFailure(error))

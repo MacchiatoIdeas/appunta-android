@@ -31,7 +31,7 @@ const Appunta = StackNavigator({
       width: Dimensions.get('window').width
     }
   },
-  initialRouteName: 'Login'
+  initialRouteName: 'Home'
 })
 
 export default class App extends React.Component {
