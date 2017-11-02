@@ -1,12 +1,17 @@
-import { APPBAR_HEIGHT } from './constants'
+import { APPUNTA_DEBUG_TOKEN } from './constants'
 
 export const makeAuthHeader = (state) => {
-  const authData = state.auth.data
+  const authData = { ...state.auth.data }
+
+  if (!authData.hasOwnProperty('access_token') &&
+    APPUNTA_DEBUG_TOKEN !== undefined) {
+    authData.access_token = APPUNTA_DEBUG_TOKEN
+  }
 
   if (authData.hasOwnProperty('access_token')) {
     return {
-      header: {
-        'Authorization': `Bearer ${authData.access_token}`
+      headers: {
+        'Authorization': `Bearer ${authData.access_token}`,
       }
     }
   }
@@ -39,3 +44,11 @@ export const makeFetchSuccess = (what) => (data) => ({
   type: what,
   data
 })
+
+export const getFullName = u => `${u.first_name} ${u.last_name}`
+
+export const formatDateToLocale = (date) => {
+  return new Date(date).toLocaleDateString('es', {
+    year: 'numeric', month: 'long', day: 'numeric'
+  });
+};

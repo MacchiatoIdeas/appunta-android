@@ -4,11 +4,14 @@ import auth from './auth'
 import subject from './subject'
 import unit from './unit'
 import exercise from './exercise'
-
+import courses from './courses'
+import course from './course'
 export default rootReducer = combineReducers({
   home,
   auth,
   subject,
   unit,
-  exercise
+  exercise,
+  courses,
+  course
 })

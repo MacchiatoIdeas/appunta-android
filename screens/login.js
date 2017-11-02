@@ -12,6 +12,7 @@ import { Fumi } from 'react-native-textinput-effects'
 import Button from 'apsl-react-native-button'
 import { getToken, resetState } from "../actions/auth"
 import { APPUNTA_COLOR } from '../constants'
+import DarkerStatusBar from '../components/DarkerStatusBar'
 
 @connect(
   state => ({
@@ -85,7 +86,7 @@ export default class LoginScreen extends React.Component {
       this.resetFields()
       resetState()
     } else if (authenticated) {
-      navigate('Home')
+      navigate('Courses')
     }
   }
 
@@ -121,6 +122,7 @@ export default class LoginScreen extends React.Component {
       <KeyboardAvoidingView
         style={styles.container}
         behaviour="padding">
+        <DarkerStatusBar/>
 
         <View>
           <View style={{ alignItems: 'center', marginBottom: 20 }}>
@@ -153,7 +155,7 @@ export default class LoginScreen extends React.Component {
               }}
               keyboardType="email-address"
               returnKeyType="next"
-              autoFocus={true}
+              autoFocus
               onChangeText={username => this.setState(() => {
                 return { username }
               })}
@@ -197,7 +199,7 @@ export default class LoginScreen extends React.Component {
           </View>
         </View>
 
-        <View style={{ height: 200 }} />
+        <View/>
       </KeyboardAvoidingView>
     )
   }
@@ -207,7 +209,7 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: APPUNTA_COLOR,
     justifyContent: 'center',
-    flex: 1
+    flex: 1,
   },
   entry: {
     width: 100,

@@ -1,5 +1,5 @@
 import { AUTH_TOKEN_FETCH, AUTH_SUCCESS, AUTH_FAILURE, AUTH_IDLE } from './index'
-import { APPUNTA_API_URI } from '../constants'
+import { APPUNTA_API_URI, APPUNTA_B64_AUTH } from '../constants'
 
 const authenticationFailed = (error) => ({
   type: AUTH_FAILURE,
@@ -23,7 +23,7 @@ export const getToken = (username, password) => (dispatch) => {
     body: `grant_type=password&username=${username}&password=${password}`,
     headers: {
       'Content-Type': 'application/x-www-form-urlencoded',
-      'Authorization': 'Basic VTRSZlhtMkpnRFRQYmZmWmNUblVDV0tMUU90emNEdUQ4T3dvTFRrYTpGM0M3eWtWMElTbUNHYlZxVVJQUzJWckNMSXd3a2lkSFVabHRNYnFFa3lrcjNxUVoyMFh4VXhQaHV5c0ZQMHBsakNwclNpdkxXQ243WlZPNllaZDlDeFNJRzJaZEhEMnNYWDJ5OEdBbGp5aVF0YUJUU21tTXpkRmNqZHk1UkZDaQ=='
+      'Authorization': `Basic ${APPUNTA_B64_AUTH}`
     }
   })
     .then(

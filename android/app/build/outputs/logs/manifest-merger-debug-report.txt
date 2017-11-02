@@ -4,6 +4,7 @@ ADDED from /Users/Rodolfo/dev/macchiato/mobile/android/app/src/main/AndroidManif
 INJECTED from /Users/Rodolfo/dev/macchiato/mobile/android/app/src/main/AndroidManifest.xml:1:1-32:12
 INJECTED from /Users/Rodolfo/dev/macchiato/mobile/android/app/src/main/AndroidManifest.xml:1:1-32:12
 INJECTED from /Users/Rodolfo/dev/macchiato/mobile/android/app/src/main/AndroidManifest.xml:1:1-32:12
+MERGED from [:react-native-vector-icons] /Users/Rodolfo/dev/macchiato/mobile/node_modules/react-native-vector-icons/android/build/intermediates/manifests/full/debug/AndroidManifest.xml:2:1-11:12
 MERGED from [com.facebook.react:react-native:0.48.4] /Users/Rodolfo/.gradle/caches/transforms-1/files-1.1/react-native-0.48.4.aar/6ad0e3f33fa9687dd09e19b7fe98aa3c/AndroidManifest.xml:2:1-15:12
 MERGED from [com.android.support:appcompat-v7:23.0.1] /Users/Rodolfo/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.0.1.aar/9a36c8f905b725cd96cf8780fe7299b9/AndroidManifest.xml:17:1-24:12
 MERGED from [com.android.support:support-v4:23.0.1] /Users/Rodolfo/.gradle/caches/transforms-1/files-1.1/support-v4-23.0.1.aar/f9c7cf2f4b59e36ba934b47c9346a298/AndroidManifest.xml:17:1-24:12
@@ -47,6 +48,8 @@ uses-sdk
 ADDED from /Users/Rodolfo/dev/macchiato/mobile/android/app/src/main/AndroidManifest.xml:9:5-11:41
 INJECTED from /Users/Rodolfo/dev/macchiato/mobile/android/app/src/main/AndroidManifest.xml:9:5-11:41
 INJECTED from /Users/Rodolfo/dev/macchiato/mobile/android/app/src/main/AndroidManifest.xml:9:5-11:41
+MERGED from [:react-native-vector-icons] /Users/Rodolfo/dev/macchiato/mobile/node_modules/react-native-vector-icons/android/build/intermediates/manifests/full/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-vector-icons] /Users/Rodolfo/dev/macchiato/mobile/node_modules/react-native-vector-icons/android/build/intermediates/manifests/full/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [com.facebook.react:react-native:0.48.4] /Users/Rodolfo/.gradle/caches/transforms-1/files-1.1/react-native-0.48.4.aar/6ad0e3f33fa9687dd09e19b7fe98aa3c/AndroidManifest.xml:7:5-9:41
 MERGED from [com.facebook.react:react-native:0.48.4] /Users/Rodolfo/.gradle/caches/transforms-1/files-1.1/react-native-0.48.4.aar/6ad0e3f33fa9687dd09e19b7fe98aa3c/AndroidManifest.xml:7:5-9:41
 MERGED from [com.android.support:appcompat-v7:23.0.1] /Users/Rodolfo/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.0.1.aar/9a36c8f905b725cd96cf8780fe7299b9/AndroidManifest.xml:20:5-43

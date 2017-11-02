@@ -8,6 +8,7 @@ import * as screens from './screens'
 import { APPUNTA_COLOR } from './constants'
 import { Dimensions } from 'react-native'
 import { makeHeaderStyle } from './api'
+import { StatusBar } from 'react-native'
 
 const store = createStore(rootReducer, {
   auth: undefined,
@@ -22,7 +23,11 @@ const Appunta = StackNavigator({
   Home: { screen: screens.HomeScreen },
   Subject: { screen: screens.SubjectScreen },
   Unit: { screen: screens.UnitScreen },
-  Exercise: { screen: screens.ExerciseScreen }
+  Exercise: { screen: screens.ExerciseScreen },
+  Courses: { screen: screens.CoursesScreen },
+  Course: { screen: screens.CourseScreen },
+  Guide: { screen: screens.GuideScreen },
+  FGuide: { screen: screens.FunctionalGuideScreen }
 }, {
   navigationOptions: {
     headerStyle: makeHeaderStyle(APPUNTA_COLOR),
@@ -31,7 +36,7 @@ const Appunta = StackNavigator({
       width: Dimensions.get('window').width
     }
   },
-  initialRouteName: 'Home'
+  initialRouteName: 'Login'
 })
 
 export default class App extends React.Component {
